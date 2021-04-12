@@ -35,7 +35,6 @@ class Calculator:
                 self.operator = temp_operator
             else:
                 self.first_operand = temp_line_1
-            # print("1 op =", self.first_operand)
             if len(self.newline) - counter_splitter != 0:
                 for char in range(counter_splitter, len(self.newline)):
                     temp_line_2 += self.newline[char]
@@ -46,7 +45,6 @@ class Calculator:
                     self.second_operand = temp_line_2[:-1]
                 else:
                     self.second_operand = temp_line_2
-                # print("2 op =", self.second_operand)
         else:
             self.answer = "0"
 
