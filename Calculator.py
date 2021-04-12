@@ -73,5 +73,5 @@ class Calculator:
 
     def print_to_file(self):
         output = self.answer
-        with open('output.txt', 'w+') as file:
+        with open('files/output.txt', 'w+') as file:
             file.write(str(output))
