@@ -1,8 +1,8 @@
 class Calculator:
 
     def __init__(self):
-        self.first_operand = 0
-        self.second_operand = 0
+        self.first_operand = ""
+        self.second_operand = ""
         self.operator = ""
         self.newline = ""
         self.answer = ""
