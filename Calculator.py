@@ -60,5 +60,16 @@ class Calculator:
             elif self.operator == "*":
                 self.answer = int(self.first_operand)*int(self.second_operand)
             elif self.operator == "/":
-                self.answer = floor(int(self.first_operand)/int(self.second_operand))
+                try:
+                    self.answer = floor(int(self.first_operand)/int(self.second_operand))
+                except ZeroDivisionError:
+                    self.answer = ZeroDivisionError
+        else:
+            if len(self.newline) != 0:
+                if self.second_operand != "":
+                    self.answer = self.second_operand
+                else:
+                    self.answer = self.first_operand
+            else:
+                self.answer = "0"
 
