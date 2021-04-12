@@ -21,7 +21,7 @@ class InputFileTest(TestCalculator):
 class NullInputTest(TestCalculator):
 
     def test_null_input(self):
-        with open("nullfile.txt", "r") as file:
+        with open("null_file.txt", "r") as file:
             program_input = file.read()
 
         self.calculator.read_file(program_input)
@@ -129,3 +129,16 @@ class LastInputTest(TestCalculator):
         self.calculator.math_operations()
         self.assertEqual(self.calculator.answer, "42", "first operator should be displayed")
 
+
+class WriteFileTest(TestCalculator):
+    def test_write_file(self):
+        with open("input_division.txt", "r") as file:
+            program_input = file.read()
+
+        self.calculator.read_file(program_input)
+        self.calculator.math_operations()
+        self.calculator.print_to_file()
+        with open("output.txt") as file:
+            content = file.read()
+
+        self.assertEqual(content, "33", "file output does not match")
