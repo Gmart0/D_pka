@@ -25,7 +25,7 @@ class NullInputTest(TestCalculator):
             program_input = file.read()
 
         self.calculator.read_file(program_input)
-        self.assertEqual(self.calculator.first_operand, "0", "Null input gives incorrect result")
+        self.assertEqual(self.calculator.answer, "0", "Null input gives incorrect result")
 
 
 class OneNumberTest(TestCalculator):

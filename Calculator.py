@@ -44,5 +44,5 @@ class Calculator:
                     self.second_operand = temp_line_2
                 # print("2 op =", self.second_operand)
         else:
-            self.first_operand = "0"
+            self.answer = "0"
 
