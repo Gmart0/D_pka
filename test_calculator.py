@@ -54,3 +54,14 @@ class CheckSecondNumberTest(TestCalculator):
         self.calculator.read_file(program_input)
         self.assertEqual(self.calculator.second_operand, "", "second operand has displayed as existed when it can't")
 
+
+class SubtractionTest(TestCalculator):
+
+    def test_subtraction(self):
+        with open("input_subtraction.txt", "r") as file:
+            program_input = file.read()
+
+        self.calculator.read_file(program_input)
+        self.calculator.math_operations()
+        self.assertEqual(self.calculator.answer, 3394, "subtraction isn't correct")
+

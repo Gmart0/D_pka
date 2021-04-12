@@ -1,3 +1,6 @@
+from math import floor
+
+
 class Calculator:
 
     def __init__(self):
@@ -29,6 +32,7 @@ class Calculator:
                     break
             if len(temp_operator) != 0:
                 self.first_operand = temp_line_1[:-1]
+                self.operator = temp_operator
             else:
                 self.first_operand = temp_line_1
             # print("1 op =", self.first_operand)
@@ -45,4 +49,16 @@ class Calculator:
                 # print("2 op =", self.second_operand)
         else:
             self.answer = "0"
+
+    def math_operations(self):
+        equal_symbol = "="
+        if self.newline.__contains__(equal_symbol):
+            if self.operator == "+":
+                self.answer = int(self.first_operand)+int(self.second_operand)
+            elif self.operator == "-":
+                self.answer = int(self.first_operand)-int(self.second_operand)
+            elif self.operator == "*":
+                self.answer = int(self.first_operand)*int(self.second_operand)
+            elif self.operator == "/":
+                self.answer = floor(int(self.first_operand)/int(self.second_operand))
 
