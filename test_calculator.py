@@ -37,7 +37,7 @@ class OneNumberTest(TestCalculator):
 
         self.calculator.read_file(program_input)
         self.calculator.math_operations()
-        self.assertEqual(self.calculator.first_operand, "42", "incorrect result with only one number")
+        self.assertEqual(self.calculator.answer, "42", "incorrect result with only one number")
 
 
 class CheckSecondNumberTest(TestCalculator):
